@@ -39,6 +39,7 @@ namespace Snake
                     img.Height = 30;
                     Canvas.SetLeft(img, i * 30);
                     Canvas.SetTop(img, j * 30);
+
                     img.Source = new BitmapImage(new Uri("Images/TileGreen.png", UriKind.Relative));
                     palya[i, j] = img;
                     canvas.Children.Add(palya[i, j]);
@@ -51,9 +52,14 @@ namespace Snake
 
         }
 
-        private void init()
+        private void draw() 
         {
-
+            for (int i = 0; i < 20; i++)
+                for (int j = 0; j < 20; j++)
+                {
+                    if (racs[i, j]==0)
+                        palya[i,j].Source =new BitmapImage
+                }
         }
     }
 }
